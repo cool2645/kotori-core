@@ -20,6 +20,7 @@ type Post struct {
 	VisitNum    uint64     `json:"visit_num"`
 	Content     string     `sql:"type:text;" json:"content"`
 	Format      string     `json:"format"`
+	Encoding    string     `json:"encoding"`
 	License     string     `json:"license"`
 	CreatedAt   time.Time  `json:"created_at"`
 	UpdatedAt   time.Time  `json:"updated_at"`

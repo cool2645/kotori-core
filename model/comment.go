@@ -17,9 +17,10 @@ type Comment struct {
 	User           User
 	Content        string     `sql:"type:text;" json:"content"`
 	Format         string     `json:"format"`
-	Public         bool       `gorm:"index" json:"public"`
-	Admit          bool       `json:"admit"`
-	Ban            bool       `json:"ban"`
+	Encoding       string     `json:"encoding"`
+	IsPublic       bool       `gorm:"index" json:"is_public"`
+	Public         bool       `json:"public"`
+	Private        bool       `json:"private"`
 	CreatedAt      time.Time  `json:"created_at"`
 	UpdatedAt      time.Time  `json:"updated_at"`
 	DeletedAt      *time.Time `json:"deleted_at"`
