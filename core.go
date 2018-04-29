@@ -12,12 +12,26 @@ import (
 
 type CorePlugin struct{}
 
+var (
+	BuildTag      string
+	BuildTime     string
+	GitCommitSHA1 string
+	GitTag        string
+)
 var pi = PluginInfo{
-	Name:    "kotori-core",
-	Author:  "2645 Studio",
-	Version: "2.0-pre-alpha.1",
-	License: "Unlicense",
-	URL:     "https://github.com/cool2645/kotori-core",
+	BasicInfo: BasicInfo{
+		Name:    "kotori-core",
+		Author:  "2645 Studio",
+		Version: "2.0-pre-alpha.1",
+		License: "Unlicense",
+		URL:     "https://github.com/cool2645/kotori-core",
+	},
+	BuildInfo: BuildInfo{
+		BuildTag:      BuildTag,
+		BuildTime:     BuildTime,
+		GitCommitSHA1: GitCommitSHA1,
+		GitTag:        GitTag,
+	},
 }
 
 func (p *CorePlugin) GetPluginInfo() PluginInfo {
