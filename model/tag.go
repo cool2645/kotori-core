@@ -7,7 +7,7 @@ import (
 
 type Tag struct {
 	ID            uint       `gorm:"AUTO_INCREMENT" json:"id"`
-	Title         string     `gorm:"index" json:"title"`
+	Name          string     `gorm:"index" json:"name"`
 	PublicPostNum uint       `gorm:"index" json:"public_post_num"`
 	PostNum       uint       `gorm:"index" json:"post_num"`
 	CreatedAt     time.Time  `json:"created_at"`

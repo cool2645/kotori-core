@@ -8,7 +8,8 @@ import (
 type Post struct {
 	ID          uint       `gorm:"AUTO_INCREMENT" json:"id"`
 	Edition     uint       `json:"edition"`
-	Title       string     `gorm:"index" json:"title"`
+	Name        string     `gorm:"index" json:"name"`
+	Title       string     `json:"title"`
 	Summary     string     `sql:"type:text;" json:"summary"`
 	CategoryID  uint       `json:"category_id"`
 	Category    Category   `json:"category"`
